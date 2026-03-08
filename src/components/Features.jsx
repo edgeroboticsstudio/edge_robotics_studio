@@ -1,7 +1,5 @@
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Cpu, Maximize2, ShieldCheck, Zap } from "lucide-react";
-
 const features = [
     {
         title: "Intelligent Hardware",
@@ -24,7 +22,6 @@ const features = [
         icon: <Zap className="w-8 h-8 text-primary" />
     }
 ];
-
 const Features = () => {
     return (
         <section className="py-24 bg-background relative overflow-hidden">
@@ -48,7 +45,6 @@ const Features = () => {
                         We engineer robotic solutions that excel in unpredictable, dynamic environments. By tightly coupling intelligent software with performant hardware, we deliver unmatched autonomy.
                     </motion.p>
                 </div>
-
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {features.map((feature, index) => (
                         <motion.div
@@ -57,7 +53,7 @@ const Features = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-surface p-8 rounded-2xl border border-slate-700 hover:border-primary/50 transition-colors group"
+                            className="bg-surface p-8 rounded-2xl border border-slate-700 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(14,165,233,0.15)] group"
                         >
                             <div className="mb-6 p-4 bg-slate-800 rounded-xl w-fit group-hover:bg-primary/20 transition-colors">
                                 {feature.icon}
@@ -71,5 +67,4 @@ const Features = () => {
         </section>
     );
 };
-
 export default Features;

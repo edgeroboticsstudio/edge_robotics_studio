@@ -1,13 +1,10 @@
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
 import { blogPosts } from "../data/blogData";
 import { Calendar, ChevronLeft, User } from "lucide-react";
-
 const BlogPost = () => {
     const { slug } = useParams();
     const post = blogPosts.find((p) => p.slug === slug);
-
     if (!post) {
         return (
             <div className="pt-32 pb-24 min-h-screen bg-background text-white flex flex-col items-center justify-center">
@@ -19,10 +16,11 @@ const BlogPost = () => {
             </div>
         );
     }
-
     return (
-        <div className="pt-32 pb-24 min-h-screen bg-background text-white">
-            <div className="max-w-4xl mx-auto px-6">
+        <div className="pt-32 pb-24 min-h-screen bg-slate-900 border-b border-slate-800 text-white relative overflow-hidden">
+            {/* Background Orbs */}
+            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none"></div>
+            <div className="max-w-4xl mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -34,28 +32,9 @@ const BlogPost = () => {
                         <ChevronLeft className="w-4 h-4" />
                         Back to Blog
                     </Link>
-
-                    <img
-                        src={post.coverImage}
-                        alt={post.title}
-                        className="w-full h-[400px] object-cover rounded-3xl mb-12 shadow-2xl shadow-primary/10"
-                    />
-
-                    <div className="flex items-center gap-6 text-sm text-gray-400 mb-6">
-                        <div className="flex items-center gap-2">
-                            <Calendar className="w-4 h-4 text-primary" />
-                            <span>{post.date}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <User className="w-4 h-4 text-primary" />
-                            <span>{post.author}</span>
-                        </div>
-                    </div>
-
-                    <h1 className="text-4xl md:text-5xl font-bold mb-12 leading-tight">
+                    <h1 className="text-4xl md:text-5xl font-black mb-12 leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
                         {post.title}
                     </h1>
-
                     <div className="prose prose-invert max-w-none space-y-8">
                         {post.content.map((item, index) => {
                             if (item.type === "heading") {
@@ -67,11 +46,11 @@ const BlogPost = () => {
                             }
                             if (item.type === "image") {
                                 return (
-                                    <div key={index} className="my-12">
+                                    <div key={index} className="my-12 flex justify-center">
                                         <img
                                             src={item.src}
                                             alt="Blog content"
-                                            className="w-full rounded-2xl shadow-xl shadow-primary/5"
+                                            className="max-h-[500px] w-auto rounded-3xl shadow-2xl border border-slate-700/50 object-cover"
                                         />
                                     </div>
                                 );
@@ -88,5 +67,4 @@ const BlogPost = () => {
         </div>
     );
 };
-
 export default BlogPost;

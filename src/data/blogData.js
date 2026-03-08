@@ -1,12 +1,16 @@
+import thumbnailImage from "../assets/thumbnail.png";
+import aboutImage from "../assets/about.jpg";
+import vacationImage from "../assets/vacation.jpeg";
+
 export const blogPosts = [
     {
         id: 1,
         title: "Who I Am and What I Build",
         slug: "who-i-am-and-what-i-build",
-        date: "March 2025",
+        date: "Jan 2026",
         author: "Edge Robotics Studio",
         excerpt: "A reflection on the journey from a small village in Gujarat to starting Edge Robotics Studio, exploring the intersection of engineering, design, and personal growth.",
-        coverImage: "https://raw.githubusercontent.com/edgeroboticsstudio/Edge-Robotics-Studio/main/static/Thumbnail.png",
+        coverImage: thumbnailImage,
         content: [
             {
                 type: "heading",
@@ -14,12 +18,12 @@ export const blogPosts = [
             },
             {
                 type: "image",
-                src: "https://raw.githubusercontent.com/edgeroboticsstudio/Edge-Robotics-Studio/main/static/about.jpg",
+                src: vacationImage,
                 caption: ""
             },
             {
                 type: "paragraph",
-                text: "I was born in a small village in Gujarat, India, where I spent the first ten years of my life. Those early years shaped who I am today and gave me a strong sense of simplicity and grounding. As I grew older, I moved to a nearby city to continue my studies, marking the beginning of my hostel life and my first real step toward independence. A few years later, I moved again to the central city of the state for my graduation, where life brought new challenges, freedom, and personal growth."
+                text: "Hi! I am Dharmesh Makvana. I was born in a small village in Gujarat, India, where I spent the first ten years of my life. Those early years shaped who I am today and gave me a strong sense of simplicity and grounding. As I grew older, I moved to a nearby city to continue my studies, marking the beginning of my hostel life and my first real step toward independence. A few years later, I moved again to the central city of the state for my graduation, where life brought new challenges, freedom, and personal growth."
             },
             {
                 type: "paragraph",

@@ -1,14 +1,11 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-// eslint-disable-next-line no-unused-vars
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import logo from "../assets/logo.png";
-
 const Navbar = () => {
   const [hidden, setHidden] = useState(false);
   const { scrollY } = useScroll();
   const location = useLocation();
-
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 30) {
       setHidden(true);
@@ -16,7 +13,6 @@ const Navbar = () => {
       setHidden(false);
     }
   });
-
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -25,9 +21,6 @@ const Navbar = () => {
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];
-
-
-
   return (
     <motion.nav
       variants={{
@@ -36,28 +29,27 @@ const Navbar = () => {
       }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md z-50 h-16 border-b border-slate-800"
+      className="fixed top-0 w-full bg-slate-900/60 backdrop-blur-xl z-50 h-20 border-b border-slate-700/50 shadow-lg"
     >
-      <div className="max-w-7xl mx-auto px-8 h-full flex items-center justify-center relative">
-        <div className="flex items-center gap-3 absolute left-8">
-          <Link to="/" className="flex items-center gap-3">
-            <img src={logo} className="w-10 h-10" alt="Logo" />
-            <span className="font-bold text-white hidden md:block">
-              Edge Robotics Studio
-            </span>
-          </Link>
-        </div>
-
-        <ul className="flex gap-8 text-gray-300">
+      <div className="max-w-7xl mx-auto px-8 h-full flex items-center justify-between relative">
+        <Link to="/" className="flex items-center gap-3">
+          <img src={logo} className="w-10 h-10" alt="Logo" />
+          <span className="font-bold text-white tracking-wide text-lg hidden md:block group-hover:text-primary transition-colors">
+            Edge Robotics Studio
+          </span>
+        </Link>
+        <ul className="flex gap-8 text-sm font-medium text-gray-300">
           {navLinks.map((link) => (
-            <li key={link.name}>
+            <li key={link.name} className="relative group">
               <Link
                 to={link.href}
-                className={`transition-colors hover:text-primary ${location.pathname === link.href ? "text-primary font-medium" : ""
+                className={`transition-colors py-2 block hover:text-white ${location.pathname === link.href ? "text-white" : ""
                   }`}
               >
                 {link.name}
               </Link>
+              {/* Active / Hover Indicator */}
+              <div className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ${location.pathname === link.href ? "w-full" : "w-0 group-hover:w-full"}`}></div>
             </li>
           ))}
         </ul>
@@ -65,5 +57,4 @@ const Navbar = () => {
     </motion.nav>
   );
 };
-
 export default Navbar;

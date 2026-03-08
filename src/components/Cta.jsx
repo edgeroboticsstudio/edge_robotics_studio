@@ -1,15 +1,12 @@
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, TerminalSquare } from "lucide-react";
-
 const Cta = () => {
     return (
         <section className="py-32 bg-slate-900 relative overflow-hidden">
             {/* Background decorative elements */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/10 blur-[120px] rounded-full pointer-events-none"></div>
-
             <div className="max-w-5xl mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -20,15 +17,12 @@ const Cta = () => {
                     <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-8 border border-primary/30">
                         <TerminalSquare className="w-8 h-8 text-primary" />
                     </div>
-
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                         Ready to automate <br className="hidden md:block" /> your operations?
                     </h2>
-
                     <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
                         Whether you need a custom ROS2 pipeline, a bespoke embedded system, or an end-to-end robotics integration, we have the expertise to bring your vision to life.
                     </p>
-
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Link
                             to="/contact"
@@ -49,5 +43,4 @@ const Cta = () => {
         </section>
     );
 };
-
 export default Cta;

@@ -1,13 +1,10 @@
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-
 const stats = [
     { value: "5+", label: "Years Experience" },
     { value: "50+", label: "Projects Delivered" },
     { value: "100%", label: "Client Satisfaction" },
     { value: "24/7", label: "Support & Maintenance" }
 ];
-
 const Stats = () => {
     return (
         <section className="py-20 bg-primary/10 border-y border-primary/20 relative">
@@ -35,5 +32,4 @@ const Stats = () => {
         </section>
     );
 };
-
 export default Stats;

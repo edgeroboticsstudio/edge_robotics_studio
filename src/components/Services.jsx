@@ -1,10 +1,8 @@
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { serviceData } from '../data/serviceData.jsx';
-
 const Services = () => {
     return (
         <section id="services" className="py-24 bg-background relative overflow-hidden">
@@ -28,7 +26,6 @@ const Services = () => {
                         Comprehensive robotics solutions from low-level firmware to high-level system integration.
                     </motion.p>
                 </div>
-
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {serviceData.map((service, index) => (
                         <motion.div
@@ -37,14 +34,13 @@ const Services = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-surface p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-700 group flex flex-col h-full"
+                            className="bg-surface p-8 rounded-2xl border border-slate-700 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(14,165,233,0.15)] group flex flex-col h-full"
                         >
                             <div className="mb-6 p-4 bg-slate-800 rounded-xl w-fit group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 {React.cloneElement(service.icon, { className: "w-8 h-8 text-primary group-hover:text-white transition-colors" })}
                             </div>
                             <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                             <p className="text-gray-400 leading-relaxed flex-grow mb-6">{service.description}</p>
-
                             <Link
                                 to={`/services/${service.slug}`}
                                 className="inline-flex items-center gap-2 text-white font-medium hover:text-primary transition-colors mt-auto"
@@ -59,5 +55,4 @@ const Services = () => {
         </section>
     );
 };
-
 export default Services;

@@ -2,7 +2,6 @@ import Hero from "./Hero";
 import Features from "./Features";
 import Stats from "./Stats";
 import Cta from "./Cta";
-
 const Home = () => {
     return (
         <>
@@ -13,5 +12,4 @@ const Home = () => {
         </>
     );
 };
-
 export default Home;
