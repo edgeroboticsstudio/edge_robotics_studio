@@ -1,24 +1,92 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+
 const Contact = () => {
+    const { executeRecaptcha } = useGoogleReCaptcha();
+    const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzoks8UttUXSqevKvMW9B7V9L12NbwjTz4syrPrFxAflAoO9gMkjEDmMGzsfz9Z7jI6/exec"; // We set this up next
+
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+        botField: ""
+    });
+    const [status, setStatus] = useState("idle"); // 'idle' | 'submitting' | 'success' | 'error'
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.id || e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        // Spam Protection 1: Honeypot check
+        if (formData.botField !== "") {
+            console.log("Bot detected via honeypot.");
+            return;
+        }
+
+        // Spam Protection 2: Google reCAPTCHA v3 check
+        if (!executeRecaptcha) {
+            alert("Security check is not ready. Please try again in a few seconds.");
+            return;
+        }
+
+        if (!GOOGLE_APPS_SCRIPT_URL.startsWith("http")) {
+            alert("Error: Google Apps Script URL is not set up yet.");
+            return;
+        }
+
+        setStatus("submitting");
+
+        try {
+            const token = await executeRecaptcha('contact_form');
+
+            // We use URLSearchParams to send data as 'application/x-www-form-urlencoded'
+            // This makes it a "Simple Request" and avoids CORS preflight issues with Google Apps Script
+            const params = new URLSearchParams();
+            params.append('name', formData.name);
+            params.append('email', formData.email);
+            params.append('subject', formData.subject);
+            params.append('message', formData.message);
+            params.append('token', token);
+
+            const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors", // Use no-cors to bypass the redirect issues
+                body: params,
+            });
+
+            // Note: With no-cors, we cannot read the response body.
+            // We assume success if the fetch doesn't throw.
+            setStatus("success");
+            setFormData({ name: "", email: "", subject: "", message: "", botField: "" });
+
+        } catch (error) {
+            setStatus("error");
+            console.error("Submission failed:", error);
+        }
+    };
     const contactInfo = [
         {
             icon: <Mail className="w-6 h-6 text-primary" />,
             label: "Email",
-            value: "contact@edgerobotics.studio",
-            href: "mailto:contact@edgerobotics.studio",
+            value: "edgeroboticsstudio@gmail.com",
+            href: "mailto:edgeroboticsstudio@gmail.com",
         },
         {
             icon: <Phone className="w-6 h-6 text-primary" />,
             label: "Phone",
-            value: "+1 (555) 000-0000",
-            href: "tel:+15550000000",
+            value: "+91 6352453903",
+            href: "tel:+91 6352453903",
         },
         {
             icon: <MapPin className="w-6 h-6 text-primary" />,
             label: "Address",
-            value: "San Francisco, CA",
-            href: "#",
+            value: "Ahmedabad, India",
         },
     ];
     return (
@@ -90,7 +158,11 @@ const Contact = () => {
                         viewport={{ once: true }}
                         className="bg-surface p-8 rounded-2xl border border-slate-700/50"
                     >
-                        <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                        <form className="space-y-6" onSubmit={handleSubmit}>
+                            <div className="hidden" aria-hidden="true" style={{ display: 'none' }}>
+                                <label htmlFor="botField">Don't fill this out if you're human:</label>
+                                <input type="text" id="botField" name="botField" tabIndex="-1" autoComplete="off" value={formData.botField} onChange={handleChange} />
+                            </div>
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
                                     <label htmlFor="name" className="text-sm font-medium text-gray-300">
@@ -99,6 +171,10 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         id="name"
+                                        name="name"
+                                        required
+                                        value={formData.name}
+                                        onChange={handleChange}
                                         className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                                         placeholder="John Doe"
                                     />
@@ -110,6 +186,10 @@ const Contact = () => {
                                     <input
                                         type="email"
                                         id="email"
+                                        name="email"
+                                        required
+                                        value={formData.email}
+                                        onChange={handleChange}
                                         className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                                         placeholder="john@example.com"
                                     />
@@ -122,6 +202,10 @@ const Contact = () => {
                                 <input
                                     type="text"
                                     id="subject"
+                                    name="subject"
+                                    required
+                                    value={formData.subject}
+                                    onChange={handleChange}
                                     className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                                     placeholder="How can we help?"
                                 />
@@ -132,17 +216,39 @@ const Contact = () => {
                                 </label>
                                 <textarea
                                     id="message"
+                                    name="message"
+                                    required
+                                    value={formData.message}
+                                    onChange={handleChange}
                                     rows="4"
                                     className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
                                     placeholder="Tell us about your project..."
                                 ></textarea>
                             </div>
+                            {/* reCAPTCHA v3 badge is typically invisible and handled automatically by the provider */}
+
+
+                            {status === "success" && (
+                                <div className="p-4 bg-emerald-500/10 border border-emerald-500/50 rounded-lg flex items-center gap-3 text-emerald-400">
+                                    <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                                    <p className="text-sm font-medium">Message sent successfully! We will get back to you soon.</p>
+                                </div>
+                            )}
+
+                            {status === "error" && (
+                                <div className="p-4 bg-red-500/10 border border-red-500/50 rounded-lg flex items-center gap-3 text-red-400">
+                                    <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                                    <p className="text-sm font-medium">Something went wrong. Please try again later.</p>
+                                </div>
+                            )}
+
                             <button
                                 type="submit"
-                                className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_20px_-5px_rgba(14,165,233,0.4)] hover:shadow-[0_0_30px_-5px_rgba(14,165,233,0.6)] group"
+                                disabled={status === "submitting"}
+                                className="w-full bg-primary hover:bg-primary-hover disabled:bg-slate-700 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_20px_-5px_rgba(14,165,233,0.4)] hover:shadow-[0_0_30px_-5px_rgba(14,165,233,0.6)] group"
                             >
-                                Send Message
-                                <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                {status === "submitting" ? "Sending..." : "Send Message"}
+                                {status !== "submitting" && <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
                             </button>
                         </form>
                     </motion.div>

@@ -9,12 +9,12 @@ export const blogPosts = [
         slug: "who-i-am-and-what-i-build",
         date: "Jan 2026",
         author: "Edge Robotics Studio",
-        excerpt: "A reflection on the journey from a small village in Gujarat to starting Edge Robotics Studio, exploring the intersection of engineering, design, and personal growth.",
+        excerpt: "A reflection on the journey from a small village in Gujarat to starting Edge Robotics Studio, exploring engineering, design, and growth.",
         coverImage: thumbnailImage,
         content: [
             {
                 type: "paragraph",
-                text: "Hi, I am Dharmesh Makvana, the founder and lead robotics engineer at Edge Robotics Studio. I've spent the past several years delving deep into robotics design, embedded systems, and automation software. This blog is a place for me to share my journey—from the technical hurdles of building robotic systems to the personal reflections along the way."
+                text: "Hi, I am Dharmesh Makvana, the founder and lead robotics engineer at Edge Robotics Studio. I've spent the past several years delving deep into robotics design, embedded systems, and automation software. This blog is a place for me to share my journey from the technical hurdles of building robotic systems to the personal reflections along the way."
             },
             {
                 type: "heading",
@@ -27,7 +27,7 @@ export const blogPosts = [
             },
             {
                 type: "paragraph",
-                text: "Hi! I am Dharmesh Makvana. I was born in a small village in Gujarat, India, where I spent the first ten years of my life. Those early years shaped who I am today and gave me a strong sense of simplicity and grounding. As I grew older, I moved to a nearby city to continue my studies, marking the beginning of my hostel life and my first real step toward independence. A few years later, I moved again to the central city of the state for my graduation, where life brought new challenges, freedom, and personal growth."
+                text: "I was born in a small village in Gujarat, India, where I spent the first ten years of my life. Those early years shaped who I am today and gave me a strong sense of simplicity and grounding. As I grew older, I moved to a nearby city to continue my studies, marking the beginning of my hostel life and my first real step toward independence. A few years later, I moved again to the central city of the state for my graduation, where life brought new challenges, freedom, and personal growth."
             },
             {
                 type: "paragraph",

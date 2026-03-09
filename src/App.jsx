@@ -1,5 +1,6 @@
 import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -32,25 +33,29 @@ const ScrollToTop = () => {
 };
 
 function App() {
+  const RECAPTCHA_SITE_KEY = "6Lc0l4QsAAAAABZggTCecLLfOge4ylQp-HGAGjlj";
+
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="bg-background min-h-screen">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/:slug" element={<ServiceDetails />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:slug" element={<ProjectDetails />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <GoogleReCaptchaProvider reCaptchaKey={RECAPTCHA_SITE_KEY}>
+      <Router>
+        <ScrollToTop />
+        <div className="bg-background min-h-screen">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/services/:slug" element={<ServiceDetails />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:slug" element={<ProjectDetails />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </GoogleReCaptchaProvider>
   );
 }
 
