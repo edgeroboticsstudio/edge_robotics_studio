@@ -3,8 +3,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: "/",
-  build: {
+  base: command === "build" ? "/edge-robotics-studio/" : "/",  build: {
     rollupOptions: {
       output: {
         manualChunks: {
