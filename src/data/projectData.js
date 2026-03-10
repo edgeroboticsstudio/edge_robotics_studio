@@ -5,7 +5,7 @@ export const projectData = [
         id: 1,
         slug: 'edge-ai-manipulator',
         title: 'Edge AI Manipulator',
-        excerpt: 'Advanced 6-DOF robotic arm with onboard AI for autonomous sorting.',
+        excerpt: '6-DOF robotic arm with onboard AI for autonomous sorting.',
         description: 'Currently in development: A high-precision manipulator featuring integrated edge computing for real-time trajectory optimization and object recognition.',
         image: manipulatorImage,
         tags: ['Robotics', 'Edge AI', 'Control Systems'],

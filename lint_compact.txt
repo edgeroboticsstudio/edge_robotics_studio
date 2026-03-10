@@ -1,4 +1,0 @@
-
-> edge-robotics-studio@0.0.0 lint
-> eslint . --format compact
-
