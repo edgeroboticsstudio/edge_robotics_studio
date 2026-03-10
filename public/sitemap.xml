@@ -38,8 +38,7 @@
   <url><loc>https://www.edgeroboticsstudio.com/#/services/rapid-prototyping</loc><priority>0.6</priority></url>
   <url><loc>https://www.edgeroboticsstudio.com/#/services/technical-documentation</loc><priority>0.6</priority></url>
   <!-- Projects -->
-  <url><loc>https://www.edgeroboticsstudio.com/#/projects/autonomous-warehouse-robot</loc><priority>0.6</priority></url>
-  <url><loc>https://www.edgeroboticsstudio.com/#/projects/smart-agricultural-drone</loc><priority>0.6</priority></url>
+  <url><loc>https://www.edgeroboticsstudio.com/#/projects/edge-ai-manipulator</loc><priority>0.6</priority></url>
   <!-- Blog -->
   <url><loc>https://www.edgeroboticsstudio.com/#/blog/who-i-am-and-what-i-build</loc><priority>0.6</priority></url>
 </urlset>
