@@ -24,6 +24,8 @@ jobs:
       - run: npm run build
       - name: Create CNAME
         run: echo "www.edgeroboticsstudio.com" > dist/CNAME
+      - name: Create 404 fallback for SPA
+        run: cp dist/index.html dist/404.html
 
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -5,40 +5,40 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/#/about</loc>
+    <loc>https://www.edgeroboticsstudio.com/about</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/#/services</loc>
+    <loc>https://www.edgeroboticsstudio.com/services</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/#/projects</loc>
+    <loc>https://www.edgeroboticsstudio.com/projects</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/#/blog</loc>
+    <loc>https://www.edgeroboticsstudio.com/blog</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/#/contact</loc>
+    <loc>https://www.edgeroboticsstudio.com/contact</loc>
     <priority>0.7</priority>
   </url>
   <!-- Services -->
-  <url><loc>https://www.edgeroboticsstudio.com/#/services/embedded-system-software</loc><priority>0.6</priority></url>
-  <url><loc>https://www.edgeroboticsstudio.com/#/services/robotics-software-ros2</loc><priority>0.6</priority></url>
-  <url><loc>https://www.edgeroboticsstudio.com/#/services/simulation-digital-twin</loc><priority>0.6</priority></url>
-  <url><loc>https://www.edgeroboticsstudio.com/#/services/computer-vision-ai</loc><priority>0.6</priority></url>
-  <url><loc>https://www.edgeroboticsstudio.com/#/services/navigation-control</loc><priority>0.6</priority></url>
-  <url><loc>https://www.edgeroboticsstudio.com/#/services/system-integration</loc><priority>0.6</priority></url>
-  <url><loc>https://www.edgeroboticsstudio.com/#/services/pcb-design-hardware</loc><priority>0.6</priority></url>
-  <url><loc>https://www.edgeroboticsstudio.com/#/services/mechanical-design-cad</loc><priority>0.6</priority></url>
-  <url><loc>https://www.edgeroboticsstudio.com/#/services/testing-validation</loc><priority>0.6</priority></url>
-  <url><loc>https://www.edgeroboticsstudio.com/#/services/devops-for-robotics</loc><priority>0.6</priority></url>
-  <url><loc>https://www.edgeroboticsstudio.com/#/services/rapid-prototyping</loc><priority>0.6</priority></url>
-  <url><loc>https://www.edgeroboticsstudio.com/#/services/technical-documentation</loc><priority>0.6</priority></url>
+  <url><loc>https://www.edgeroboticsstudio.com/services/embedded-system-software</loc><priority>0.6</priority></url>
+  <url><loc>https://www.edgeroboticsstudio.com/services/robotics-software-ros2</loc><priority>0.6</priority></url>
+  <url><loc>https://www.edgeroboticsstudio.com/services/simulation-digital-twin</loc><priority>0.6</priority></url>
+  <url><loc>https://www.edgeroboticsstudio.com/services/computer-vision-ai</loc><priority>0.6</priority></url>
+  <url><loc>https://www.edgeroboticsstudio.com/services/navigation-control</loc><priority>0.6</priority></url>
+  <url><loc>https://www.edgeroboticsstudio.com/services/system-integration</loc><priority>0.6</priority></url>
+  <url><loc>https://www.edgeroboticsstudio.com/services/pcb-design-hardware</loc><priority>0.6</priority></url>
+  <url><loc>https://www.edgeroboticsstudio.com/services/mechanical-design-cad</loc><priority>0.6</priority></url>
+  <url><loc>https://www.edgeroboticsstudio.com/services/testing-validation</loc><priority>0.6</priority></url>
+  <url><loc>https://www.edgeroboticsstudio.com/services/devops-for-robotics</loc><priority>0.6</priority></url>
+  <url><loc>https://www.edgeroboticsstudio.com/services/rapid-prototyping</loc><priority>0.6</priority></url>
+  <url><loc>https://www.edgeroboticsstudio.com/services/technical-documentation</loc><priority>0.6</priority></url>
   <!-- Projects -->
-  <url><loc>https://www.edgeroboticsstudio.com/#/projects/edge-ai-manipulator</loc><priority>0.6</priority></url>
+  <url><loc>https://www.edgeroboticsstudio.com/projects/edge-ai-manipulator</loc><priority>0.6</priority></url>
   <!-- Blog -->
-  <url><loc>https://www.edgeroboticsstudio.com/#/blog/who-i-am-and-what-i-build</loc><priority>0.6</priority></url>
+  <url><loc>https://www.edgeroboticsstudio.com/blog/who-i-am-and-what-i-build</loc><priority>0.6</priority></url>
 </urlset>
