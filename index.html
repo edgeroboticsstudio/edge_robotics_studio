@@ -16,6 +16,24 @@
   <meta name="author" content="Dharmesh Makvana" />
   <link id="canonical-link" rel="canonical" href="https://edgeroboticsstudio.com/" />
   <script>
+    (function(l) {
+      if (l.search[1] === 'p' ) {
+        var p = l.search.slice(1).split('&').filter(function(s) {
+          return s.slice(0, 2) === 'p=';
+        })[0];
+        if (p !== undefined) {
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + (p.slice(2) || '/') +
+            l.search.slice(1).split('&').filter(function(s) {
+              return s.slice(0, 2) !== 'p=';
+            }).join('&').replace(/~and~/g, '&').replace(/^(.+)$/, '?$1') +
+            l.hash
+          );
+        }
+      }
+    })(window.location);
+  </script>
+  <script>
     (function() {
       var canonical = document.getElementById('canonical-link');
       var path = window.location.pathname;
