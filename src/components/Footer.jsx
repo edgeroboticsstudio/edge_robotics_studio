@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaYoutube, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaYoutube, FaEnvelope, FaInstagram } from 'react-icons/fa';
 const Footer = () => {
     return (
         <footer className="bg-secondary text-slate-300 py-16 border-t border-slate-800">
@@ -38,6 +38,9 @@ const Footer = () => {
                             <FaYoutube size={20} />
                         </a>
 
+                        <a href="https://www.instagram.com/edge_robotics_studio" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-800 rounded-lg hover:bg-primary hover:text-white transition-all">
+                            <FaInstagram size={20} />
+                        </a>
                         <a href="mailto:edgeroboticsstudio@gmail.com" className="p-2 bg-slate-800 rounded-lg hover:bg-primary hover:text-white transition-all">
                             <FaEnvelope size={20} />
                         </a>
