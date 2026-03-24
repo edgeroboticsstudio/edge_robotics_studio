@@ -12,6 +12,8 @@ const Hero = () => {
                 transition={{ duration: 1.5, ease: "easeOut" }}
                 src={heroBg}
                 alt="Robotics Studio Background"
+                fetchPriority="high"
+                decoding="sync"
                 className="absolute inset-0 w-full h-full object-cover"
             />
             {/* Dark/Gradient Overlays */}
@@ -52,7 +54,7 @@ const Hero = () => {
                 >
                     <Link
                         to="/contact"
-                        className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary-hover text-white rounded-full font-semibold transition-all shadow-[0_0_30px_-5px_rgba(14,165,233,0.5)] hover:shadow-[0_0_40px_-5px_rgba(14,165,233,0.7)] flex items-center justify-center gap-2 group"
+                        className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary-hover text-slate-950 rounded-full font-semibold transition-all shadow-[0_0_30px_-5px_rgba(14,165,233,0.5)] hover:shadow-[0_0_40px_-5px_rgba(14,165,233,0.7)] flex items-center justify-center gap-2 group"
                     >
                         Start Your Project
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

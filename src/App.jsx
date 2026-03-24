@@ -36,26 +36,31 @@ function App() {
   const RECAPTCHA_SITE_KEY = "6Lc0l4QsAAAAABZggTCecLLfOge4ylQp-HGAGjlj";
 
   return (
-    <GoogleReCaptchaProvider reCaptchaKey={RECAPTCHA_SITE_KEY}>
-      <Router>
-        <ScrollToTop />
-        <div className="bg-background min-h-screen">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/services/:slug" element={<ServiceDetails />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/:slug" element={<ProjectDetails />} />
-          </Routes>
-          <Footer />
-        </div>
-      </Router>
-    </GoogleReCaptchaProvider>
+    <Router>
+      <ScrollToTop />
+      <div className="bg-background min-h-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route 
+            path="/contact" 
+            element={
+              <GoogleReCaptchaProvider reCaptchaKey={RECAPTCHA_SITE_KEY}>
+                <Contact />
+              </GoogleReCaptchaProvider>
+            } 
+          />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/:slug" element={<ServiceDetails />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:slug" element={<ProjectDetails />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

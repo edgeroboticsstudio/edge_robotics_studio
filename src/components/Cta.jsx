@@ -26,7 +26,7 @@ const Cta = () => {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Link
                             to="/contact"
-                            className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary-hover text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-primary/25 flex items-center justify-center gap-2"
+                            className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary-hover text-slate-950 font-semibold rounded-xl transition-all shadow-lg hover:shadow-primary/25 flex items-center justify-center gap-2"
                         >
                             Start a Project
                             <ArrowRight className="w-5 h-5" />

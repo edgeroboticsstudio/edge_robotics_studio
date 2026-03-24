@@ -95,7 +95,7 @@ const Navbar = () => {
                 <Link
                   to="/contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="px-8 py-3 bg-primary hover:bg-primary-hover text-white rounded-full font-semibold transition-all inline-block"
+                  className="px-8 py-3 bg-primary hover:bg-primary-hover text-slate-950 rounded-full font-semibold transition-all inline-block"
                 >
                   Start a Project
                 </Link>

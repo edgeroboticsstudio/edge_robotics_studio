@@ -28,26 +28,26 @@ const Footer = () => {
                 <div className="lg:col-span-3">
                     <h4 className="text-white font-semibold mb-6">Connect</h4>
                     <div className="flex gap-4">
-                        <a href="https://github.com/edgeroboticsstudio" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-800 rounded-lg hover:bg-primary hover:text-white transition-all">
+                        <a href="https://github.com/edgeroboticsstudio" aria-label="GitHub" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-800 rounded-lg hover:bg-primary hover:text-slate-950 transition-all">
                             <FaGithub size={20} />
                         </a>
-                        <a href="https://www.linkedin.com/company/edgeroboticsstudio" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-800 rounded-lg hover:bg-primary hover:text-white transition-all">
+                        <a href="https://www.linkedin.com/company/edgeroboticsstudio" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-800 rounded-lg hover:bg-primary hover:text-slate-950 transition-all">
                             <FaLinkedin size={20} />
                         </a>
-                        <a href="https://www.youtube.com/@edge_robotics_studio" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-800 rounded-lg hover:bg-primary hover:text-white transition-all">
+                        <a href="https://www.youtube.com/@edge_robotics_studio" aria-label="YouTube" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-800 rounded-lg hover:bg-primary hover:text-slate-950 transition-all">
                             <FaYoutube size={20} />
                         </a>
 
-                        <a href="https://www.instagram.com/edge_robotics_studio" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-800 rounded-lg hover:bg-primary hover:text-white transition-all">
+                        <a href="https://www.instagram.com/edge_robotics_studio" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-800 rounded-lg hover:bg-primary hover:text-slate-950 transition-all">
                             <FaInstagram size={20} />
                         </a>
-                        <a href="mailto:edgeroboticsstudio@gmail.com" className="p-2 bg-slate-800 rounded-lg hover:bg-primary hover:text-white transition-all">
+                        <a href="mailto:edgeroboticsstudio@gmail.com" aria-label="Email" className="p-2 bg-slate-800 rounded-lg hover:bg-primary hover:text-slate-950 transition-all">
                             <FaEnvelope size={20} />
                         </a>
                     </div>
                 </div>
             </div>
-            <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
+            <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800 text-center text-sm text-slate-400">
                 © {new Date().getFullYear()} Edge Robotics Studio. All rights reserved.
             </div>
         </footer>
