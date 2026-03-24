@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 const Hero = () => {
     return (
-        <div className="relative w-full h-screen overflow-hidden">
+        <div className="relative w-full min-h-screen overflow-hidden">
             {/* Background Image */}
             <motion.img
                 initial={{ scale: 1.1 }}
@@ -25,13 +25,13 @@ const Hero = () => {
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 blur-[150px] rounded-full z-0 pointer-events-none"
             ></motion.div>
             {/* Content Container */}
-            <div className="relative z-10 w-full h-full flex flex-col items-center justify-center text-center px-4 pt-16 max-w-5xl mx-auto">
+            <div className="relative z-10 w-full h-full min-h-screen flex flex-col items-center justify-center text-center px-4 pt-20 pb-10 max-w-5xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight leading-tight">
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 tracking-tight leading-tight">
                         Empowering <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Discovery</span> <br />
                         Guiding Exploration
                     </h1>
@@ -40,7 +40,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    className="text-lg md:text-2xl text-gray-300 max-w-3xl mb-12 leading-relaxed"
+                    className="text-base sm:text-lg md:text-2xl text-gray-300 max-w-3xl mb-12 leading-relaxed px-2"
                 >
                     Delivering end-to-end robotics development and prototyping services that convert innovative ideas into functional robotic systems.
                 </motion.p>
@@ -48,18 +48,18 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                    className="flex flex-col sm:flex-row gap-4"
+                    className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4"
                 >
                     <Link
                         to="/contact"
-                        className="px-8 py-4 bg-primary hover:bg-primary-hover text-white rounded-full font-semibold transition-all shadow-[0_0_30px_-5px_rgba(14,165,233,0.5)] hover:shadow-[0_0_40px_-5px_rgba(14,165,233,0.7)] flex items-center justify-center gap-2 group"
+                        className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary-hover text-white rounded-full font-semibold transition-all shadow-[0_0_30px_-5px_rgba(14,165,233,0.5)] hover:shadow-[0_0_40px_-5px_rgba(14,165,233,0.7)] flex items-center justify-center gap-2 group"
                     >
                         Start Your Project
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                     <Link
                         to="/services"
-                        className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 rounded-full font-semibold transition-all flex items-center justify-center"
+                        className="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 rounded-full font-semibold transition-all flex items-center justify-center"
                     >
                         Explore Services
                     </Link>
