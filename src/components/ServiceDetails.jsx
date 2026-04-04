@@ -51,7 +51,7 @@ const ServiceDetails = () => {
                         <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors duration-500 rounded-3xl pointer-events-none"></div>
                         <h3 className="text-2xl font-bold text-white mb-4 relative z-10">Need help with {service.title}?</h3>
                         <p className="text-gray-400 mb-8 relative z-10 max-w-2xl mx-auto">Reach out to us to discuss your project requirements and see how our expertise can accelerate your timelines.</p>
-                        <Link to="/contact" className="relative z-10 inline-block bg-primary text-white font-medium px-10 py-4 rounded-xl hover:bg-primary-hover transition-all duration-300 shadow-[0_0_20px_-5px_rgba(14,165,233,0.4)] hover:shadow-[0_0_30px_-5px_rgba(14,165,233,0.6)] hover:-translate-y-1">
+                        <Link to="/contact/" className="relative z-10 inline-block bg-primary text-white font-medium px-10 py-4 rounded-xl hover:bg-primary-hover transition-all duration-300 shadow-[0_0_20px_-5px_rgba(14,165,233,0.4)] hover:shadow-[0_0_30px_-5px_rgba(14,165,233,0.6)] hover:-translate-y-1">
                             Contact Us
                         </Link>
                     </div>

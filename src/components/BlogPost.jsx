@@ -9,7 +9,7 @@ const BlogPost = () => {
         return (
             <div className="pt-32 pb-24 min-h-screen bg-background text-white flex flex-col items-center justify-center">
                 <h1 className="text-2xl font-bold mb-4">Post not found</h1>
-                <Link to="/blog" className="text-primary hover:underline flex items-center gap-2">
+                <Link to="/blog/" className="text-primary hover:underline flex items-center gap-2">
                     <ChevronLeft className="w-4 h-4" />
                     Back to Blog
                 </Link>
@@ -26,7 +26,7 @@ const BlogPost = () => {
                     animate={{ opacity: 1, y: 0 }}
                 >
                     <Link
-                        to="/blog"
+                        to="/blog/"
                         className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8"
                     >
                         <ChevronLeft className="w-4 h-4" />

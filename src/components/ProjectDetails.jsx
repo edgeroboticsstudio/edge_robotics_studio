@@ -67,7 +67,7 @@ const ProjectDetails = () => {
                             <h3 className="text-2xl font-bold text-white mb-2">Build your next project with us</h3>
                             <p className="text-gray-400">Our engineering team is ready to tackle your hardest robotics challenges.</p>
                         </div>
-                        <Link to="/contact" className="relative z-10 whitespace-nowrap bg-primary text-white font-medium px-8 py-4 rounded-xl hover:bg-primary-hover transition-all duration-300 shadow-[0_0_20px_-5px_rgba(14,165,233,0.4)] hover:shadow-[0_0_30px_-5px_rgba(14,165,233,0.6)] hover:-translate-y-1">
+                        <Link to="/contact/" className="relative z-10 whitespace-nowrap bg-primary text-white font-medium px-8 py-4 rounded-xl hover:bg-primary-hover transition-all duration-300 shadow-[0_0_20px_-5px_rgba(14,165,233,0.4)] hover:shadow-[0_0_30px_-5px_rgba(14,165,233,0.6)] hover:-translate-y-1">
                             Start a Conversation
                         </Link>
                     </div>

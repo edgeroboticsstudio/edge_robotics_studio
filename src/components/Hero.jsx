@@ -53,14 +53,14 @@ const Hero = () => {
                     className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4"
                 >
                     <Link
-                        to="/contact"
+                        to="/contact/"
                         className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary-hover text-slate-950 rounded-full font-semibold transition-all shadow-[0_0_30px_-5px_rgba(14,165,233,0.5)] hover:shadow-[0_0_40px_-5px_rgba(14,165,233,0.7)] flex items-center justify-center gap-2 group"
                     >
                         Start Your Project
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                     <Link
-                        to="/services"
+                        to="/services/"
                         className="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 rounded-full font-semibold transition-all flex items-center justify-center"
                     >
                         Explore Services

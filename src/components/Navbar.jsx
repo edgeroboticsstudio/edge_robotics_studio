@@ -17,11 +17,11 @@ const Navbar = () => {
   });
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Projects", href: "/projects" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
+    { name: "About", href: "/about/" },
+    { name: "Services", href: "/services/" },
+    { name: "Projects", href: "/projects/" },
+    { name: "Blog", href: "/blog/" },
+    { name: "Contact", href: "/contact/" },
   ];
   return (
     <>
@@ -93,7 +93,7 @@ const Navbar = () => {
               ))}
               <div className="mt-8">
                 <Link
-                  to="/contact"
+                  to="/contact/"
                   onClick={() => setMobileMenuOpen(false)}
                   className="px-8 py-3 bg-primary hover:bg-primary-hover text-slate-950 rounded-full font-semibold transition-all inline-block"
                 >

@@ -6,85 +6,85 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://edgeroboticsstudio.com/about</loc>
+    <loc>https://edgeroboticsstudio.com/about/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://edgeroboticsstudio.com/services</loc>
+    <loc>https://edgeroboticsstudio.com/services/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://edgeroboticsstudio.com/projects</loc>
+    <loc>https://edgeroboticsstudio.com/projects/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://edgeroboticsstudio.com/blog</loc>
+    <loc>https://edgeroboticsstudio.com/blog/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edgeroboticsstudio.com/contact</loc>
+    <loc>https://edgeroboticsstudio.com/contact/</loc>
     <priority>0.7</priority>
   </url>
 
   <!-- Service Details -->
   <url>
-    <loc>https://edgeroboticsstudio.com/services/embedded-system-software</loc>
+    <loc>https://edgeroboticsstudio.com/services/embedded-system-software/</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://edgeroboticsstudio.com/services/robotics-software-ros2</loc>
+    <loc>https://edgeroboticsstudio.com/services/robotics-software-ros2/</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://edgeroboticsstudio.com/services/simulation-digital-twin</loc>
+    <loc>https://edgeroboticsstudio.com/services/simulation-digital-twin/</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://edgeroboticsstudio.com/services/computer-vision-ai</loc>
+    <loc>https://edgeroboticsstudio.com/services/computer-vision-ai/</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://edgeroboticsstudio.com/services/navigation-control</loc>
+    <loc>https://edgeroboticsstudio.com/services/navigation-control/</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://edgeroboticsstudio.com/services/system-integration</loc>
+    <loc>https://edgeroboticsstudio.com/services/system-integration/</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://edgeroboticsstudio.com/services/pcb-design-hardware</loc>
+    <loc>https://edgeroboticsstudio.com/services/pcb-design-hardware/</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://edgeroboticsstudio.com/services/mechanical-design-cad</loc>
+    <loc>https://edgeroboticsstudio.com/services/mechanical-design-cad/</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://edgeroboticsstudio.com/services/testing-validation</loc>
+    <loc>https://edgeroboticsstudio.com/services/testing-validation/</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://edgeroboticsstudio.com/services/devops-for-robotics</loc>
+    <loc>https://edgeroboticsstudio.com/services/devops-for-robotics/</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://edgeroboticsstudio.com/services/rapid-prototyping</loc>
+    <loc>https://edgeroboticsstudio.com/services/rapid-prototyping/</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://edgeroboticsstudio.com/services/technical-documentation</loc>
+    <loc>https://edgeroboticsstudio.com/services/technical-documentation/</loc>
     <priority>0.6</priority>
   </url>
 
   <!-- Project Details -->
   <url>
-    <loc>https://edgeroboticsstudio.com/projects/edge-ai-manipulator</loc>
+    <loc>https://edgeroboticsstudio.com/projects/edge-ai-manipulator/</loc>
     <priority>0.6</priority>
   </url>
 
   <!-- Blog Posts -->
   <url>
-    <loc>https://edgeroboticsstudio.com/blog/who-i-am-and-what-i-build</loc>
+    <loc>https://edgeroboticsstudio.com/blog/who-i-am-and-what-i-build/</loc>
     <priority>0.6</priority>
   </url>
 </urlset>
