@@ -33,28 +33,21 @@ const ProjectDetails = () => {
                     animate={{ opacity: 1, y: 0 }}
                 >
                     <div className="mb-12">
-                        <div className="flex flex-wrap gap-2 mb-6">
-                            {project.tags.map((tag, i) => (
-                                <span key={i} className="flex items-center gap-1 px-3 py-1 bg-slate-800 text-gray-300 text-sm font-medium rounded-full border border-slate-700">
-                                    <Tag className="w-3 h-3 text-primary" />
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
-                        <h1 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 mb-6 tracking-tight">
+                        <div className="mb-2"></div>
+                        <h1 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 mb-6 tracking-tight pb-2">
                             {project.title}
                         </h1>
                         <p className="text-xl text-gray-400 leading-relaxed">
                             {project.description}
                         </p>
                     </div>
-                    <div className="relative w-full h-[400px] md:h-[500px] mb-16 group">
+                    <div className="relative w-full mb-16 group">
                         <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-3xl -z-10 group-hover:bg-primary/30 transition-colors duration-500"></div>
-                        <div className="w-full h-full rounded-3xl overflow-hidden border border-slate-700 shadow-2xl">
+                        <div className="w-full rounded-3xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-900/50">
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
                             />
                         </div>
                     </div>

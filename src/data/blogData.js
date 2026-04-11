@@ -8,6 +8,7 @@ export const blogPosts = [
         slug: "who-i-am-and-what-i-build",
         date: "Jan 2026",
         author: "Edge Robotics Studio",
+        category: "Personal",
         excerpt: "A reflection on the journey from a small village in Gujarat to starting Edge Robotics Studio, exploring engineering, design, and growth.",
         coverImage: thumbnailImage,
         content: [

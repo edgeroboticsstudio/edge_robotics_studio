@@ -42,54 +42,46 @@ const Projects = () => {
                             transition={{ delay: index * 0.1 }}
                             className="group relative bg-slate-800/50 rounded-3xl border border-slate-700 overflow-hidden hover:border-primary/50 transition-all duration-500"
                         >
-                            {/* Project Image */}
-                            <div className="relative h-64 overflow-hidden">
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
+                            <Link to={`/projects/${project.slug}`} className="block h-full">
+                                {/* Project Image */}
+                                <div className="relative h-80 sm:h-96 overflow-hidden">
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
 
-                                {project.isComingSoon && (
-                                    <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-lg border border-white/10 uppercase tracking-widest animate-pulse">
-                                        <Clock className="w-3 h-3" />
-                                        Coming Soon
-                                    </div>
-                                )}
-
-                                <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
-                                    {project.tags.slice(0, 2).map((tag, i) => (
-                                        <span key={i} className="px-3 py-1 bg-slate-900/80 backdrop-blur-md text-gray-300 text-xs font-medium rounded-full border border-slate-700/50">
-                                            {tag}
-                                        </span>
-                                    ))}
+                                    {project.isComingSoon && (
+                                        <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-lg border border-white/10 uppercase tracking-widest animate-pulse">
+                                            <Clock className="w-3 h-3" />
+                                            Coming Soon
+                                        </div>
+                                    )}
                                 </div>
-                            </div>
 
-                            {/* Project Content */}
-                            <div className="p-8">
-                                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
-                                    {project.title}
-                                </h3>
-                                <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-2">
-                                    {project.excerpt}
-                                </p>
+                                {/* Project Content */}
+                                <div className="p-8">
+                                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                                        {project.title}
+                                    </h3>
+                                    <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-2">
+                                        {project.excerpt}
+                                    </p>
 
-                                {project.isComingSoon ? (
-                                    <div className="flex items-center gap-2 text-primary font-medium text-sm">
-                                        Initial prototyping in progress
-                                    </div>
-                                ) : (
-                                    <Link
-                                        to={`/projects/${project.slug}`}
-                                        className="inline-flex items-center gap-2 text-white font-semibold group/link"
-                                    >
-                                        View Case Study
-                                        <ArrowRight className="w-4 h-4 text-primary group-hover/link:translate-x-1 transition-transform" />
-                                    </Link>
-                                )}
-                            </div>
+                                    {project.isComingSoon ? (
+                                        <div className="flex items-center gap-2 text-primary font-medium text-sm">
+                                            Initial prototyping in progress
+                                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                                        </div>
+                                    ) : (
+                                        <span className="inline-flex items-center gap-2 text-white font-semibold group/link">
+                                            View Case Study
+                                            <ArrowRight className="w-4 h-4 text-primary group-hover/link:translate-x-1 transition-transform group-hover:translate-x-1" />
+                                        </span>
+                                    )}
+                                </div>
+                            </Link>
                         </motion.div>
                     ))}
                 </div>
